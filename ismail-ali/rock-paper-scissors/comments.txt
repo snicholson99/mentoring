@@ -1,0 +1,12 @@
+1. Did you check console? 2 Errors:
+  a. GET file:///Users/scott/code/mentoring/ismail-ali/rock-paper-scissors/style.css net::ERR_FILE_NOT_FOUND
+  b. Uncaught ReferenceError: Cannot access 'prompt' before initialization at main.js:26
+
+2. Googling the error showed me this: https://stackoverflow.com/questions/56318460/cannot-access-variable-name-before-initialization
+This shows that `const prompt` is incorrect, as `prompt` already exists as a js value. Simply changing the name fixes this value.
+
+3. Create html to put into on the page, ie. `<div id="page"></div>`
+
+4. Easier to understand if you start the game on a button click, then put the whole game functionality in a `startGame` function.
+
+5. Score should be tracked if we want +1/-1. For example `let score = 0;`. An alternative which may be easier to start is to display a win/loss per game by changing +1 to `<p>You win!</p>`.
